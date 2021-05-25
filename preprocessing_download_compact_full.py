@@ -173,9 +173,9 @@ matplotlib.rcParams['font.size'] = 18
 # In[17]:
 
 
-get_ipython().run_line_magic('run', 'preprocessing')
+from preprocessing import *
 
-
+print("preprocessing")
 # In[18]:
 
 
@@ -232,7 +232,7 @@ img_path_folder = "/home/StanXav/modal_landscape/data"
 def create_and_register(t):
     i,data = t
     (key, url, label) = data
-    if (label != "None") and (num_labels[int(label)]>debut_lab and num_labels[int(label)]<fin_lab) and image_per_label[int(label)] < 160 :
+    if (label != "None") and (num_labels[int(label)]>debut_lab and num_labels[int(label)]<fin_lab) :
         pil_image = DownloadImage(data)
         if type(pil_image)!= type(None) :
             pil_image = np.array(pil_image)
