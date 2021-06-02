@@ -4,8 +4,6 @@ import numpy as np
 
 from skimage import data
 
-from PIL.Image import *
-
 from imageio import imread
 import glob
 
